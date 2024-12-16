@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 echo "pre-commit 훅 테스트 중...."
 exit 1
