@@ -1,5 +1,4 @@
 #!/bin/sh
 
-echo "pre-commit hook 테스트 중..."
-
+echo "pre-commit 훅 테스트 중...."
 exit 1
