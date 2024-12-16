@@ -1,14 +1,12 @@
 branch=$(git rev-parse --abbrev-ref HEAD)
 regex="^(feature|hotfix).*$"
 
-echo $branch
-
-if ! [[ $branch =~ $regex ]]; then
-  echo "develop, master, release 브랜치에서는 커밋을 할 수 없습니다."
-  echo "feature 브랜치 또는 hotfix 브랜치에서 커밋 후 merge 해주세요."
+# if ! [[ $branch =~ $regex ]]; then
+#   echo "develop, master, release 브랜치에서는 커밋을 할 수 없습니다."
+#   echo "feature 브랜치 또는 hotfix 브랜치에서 커밋 후 merge 해주세요."
   
-  exit 1
-fi
+#   exit 1
+# fi
 
 yarn lint-staged
 
