@@ -1,0 +1,29 @@
+name: Auto merge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: "develop"
+
+      - name: Merge to 'develop' branch
+        run: |
+          git merge master
+          git push origin develop
+
+      - name: When Failed
+        if: ${{ failure() }}
+        run: echo "Fail merge"
+
+      - name: When Completed
+        if: ${{ success() }}
+        run: echo "Complte merge"
