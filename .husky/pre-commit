@@ -1,5 +1,5 @@
 branch=$(git rev-parse --abbrev-ref HEAD)
-regex="^[feature|hotfix].+$"
+regex="^(feature|hotfix).*$"
 
 echo $branch
 
