@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: "develop"
 
       - name: Merge to 'develop' branch
         run: |
