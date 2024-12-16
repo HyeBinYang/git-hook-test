@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Run pre-commit hook"
+
+exit 0
