@@ -1,0 +1,11 @@
+{
+  "name": "git-hook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HyeBinYang/git-hook-test.git",
+  "author": "RobinHyeBin <robin@nextunicorn.kr>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
