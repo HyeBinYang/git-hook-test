@@ -6,9 +6,16 @@
   "author": "RobinHyeBin <robin@nextunicorn.kr>",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "eslint": "^9.17.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "scripts": {
-    "prepare": "husky"
+    "postinstall": "husky"
   }
 }
