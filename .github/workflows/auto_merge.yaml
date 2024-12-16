@@ -1,0 +1,26 @@
+name: Auto merge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  merge:
+    name: Merge master branch
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Merge to 'develop' branch
+        run: |
+          git checkout develop
+          git merge master
+          git push origin develop
+
+      - name: When Failed
+        if: ${{ failure() }}
+        run: echo "Fail merge"
+
+      - name: When Completed
+        if: ${{ success() }}
+        run: echo "Complte merge"
