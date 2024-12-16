@@ -1,5 +1,5 @@
 branch=$(git rev-parse --abbrev-ref HEAD)
-regex="^[feature|hotfix].+$"
+regex="^(feature|hotfix).*$"
 
 if ! [[ $branch =~ $regex ]]; then
   echo "develop, master, release 브랜치에서는 커밋을 할 수 없습니다."
