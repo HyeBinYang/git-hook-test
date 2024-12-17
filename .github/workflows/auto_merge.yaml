@@ -1,4 +1,4 @@
-name: Auto merge
+name: Merge to develop branch
 
 on:
   push:
@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout develop branch
         uses: actions/checkout@v4
         with:
-          ref: "develop"
+          fetch-depth: 0
 
-      - name: Merge to 'develop' branch
+      - name: Merge to develop branch
         run: |
+          git checkout develop
           git merge master
           git push origin develop
 
